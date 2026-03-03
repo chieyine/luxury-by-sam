@@ -5,7 +5,7 @@ import { Reveal } from "./Animations";
 const testimonials = [
   {
     name: "James T.",
-    location: "Watford",
+    location: "Hertfordshire",
     text: "Sam fitted our bedroom wardrobes perfectly—clean work, no mess, and exactly what we asked for. Couldn't be happier.",
     project: "Fitted Wardrobes",
   },

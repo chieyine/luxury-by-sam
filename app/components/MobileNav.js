@@ -58,7 +58,7 @@ export default function MobileNav({ open, setOpen }) {
                 { href: "/shop", label: "Services", desc: "Wardrobes, kitchens and custom storage." },
                 { href: "/advice", label: "Advice", desc: "Helpful guides before you build." },
                 { href: "/process", label: "Our Process", desc: "From consultation to installation." },
-                { href: "/contact", label: "Contact", desc: "Free quote · Watford & UK-wide." },
+                { href: "/contact", label: "Contact", desc: "Free quote · UK-wide." },
               ].map((item) => (
                 <div key={item.href}>
                   <Link

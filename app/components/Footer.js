@@ -31,7 +31,6 @@ export default function Footer() {
           </div>
           <div className="space-y-5">
             <p className="text-[10px] uppercase tracking-widest text-foreground/40 font-bold">Serving area</p>
-            <p className="text-sm text-foreground/70">Watford, Hertfordshire</p>
             <p className="text-sm text-foreground/70">Across the United Kingdom</p>
             <p className="text-sm text-foreground/70">Free consultation & quotation</p>
           </div>

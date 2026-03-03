@@ -182,7 +182,7 @@ export default function CheckoutPage() {
                 type="submit"
                 disabled={isSubmitting || items.length === 0}
                 aria-busy={isSubmitting}
-                className="w-full py-5 bg-foreground text-background text-[10px] uppercase tracking-[0.3em] font-sans hover:bg-foreground/90 transition-colors disabled:opacity-50 flex justify-center items-center"
+                className="w-full py-5 border border-foreground/20 bg-transparent text-foreground text-[10px] uppercase tracking-[0.3em] font-sans hover:bg-accent/15 transition-colors disabled:opacity-50 flex justify-center items-center"
               >
                 {isSubmitting ? "Sending..." : `Send request • est. £${cartTotal.toLocaleString()}`}
               </button>
@@ -196,7 +196,7 @@ export default function CheckoutPage() {
                 <button
                   type="button"
                   onClick={() => window.print()}
-                  className="w-full mt-3 py-4 border border-foreground/20 text-[10px] uppercase tracking-[0.3em] font-sans hover:bg-foreground/5 transition-colors flex justify-center items-center gap-2"
+                  className="w-full mt-3 py-4 border border-foreground/10 text-[10px] uppercase tracking-[0.3em] font-sans hover:bg-foreground/5 transition-colors flex justify-center items-center gap-2"
                 >
                   <svg viewBox="0 0 24 24" className="w-4 h-4 fill-none stroke-current stroke-2" aria-hidden="true">
                     <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" strokeLinecap="round" strokeLinejoin="round" />
@@ -210,7 +210,7 @@ export default function CheckoutPage() {
 
         {/* Quote Summary */}
         <div className="relative print:w-full print:block">
-          <div className="sticky top-10 space-y-8 brutal-panel p-8 md:p-10 bg-secondary/10 print:p-0 print:border-none print:shadow-none print:bg-transparent">
+          <div className="sticky top-10 space-y-8 brutal-panel p-8 md:p-10 print:p-0 print:border-none print:shadow-none print:bg-transparent">
             {/* Print Header */}
             <div className="hidden print:block mb-12 border-b border-black/20 pb-6">
               <h2 className="text-3xl font-serif brutal-title tracking-tight text-black">Luxury by Sam</h2>
@@ -224,7 +224,7 @@ export default function CheckoutPage() {
             <div className="space-y-6 max-h-[50vh] overflow-y-auto pr-2">
               {items.map((item) => (
                 <div key={item.id} className="flex gap-4">
-                  <div className="w-16 h-20 bg-secondary shrink-0 border border-foreground/10 relative overflow-hidden">
+                  <div className="w-16 h-20 shrink-0 border border-foreground/10 relative overflow-hidden">
                     {item.image ? (
                       <Image src={item.image} alt={item.title} fill className="object-cover" sizes="64px" />
                     ) : (

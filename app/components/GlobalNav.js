@@ -30,9 +30,9 @@ export default function GlobalNav({ theme = "default", className = "" }) {
   // Remove mix-blend-difference and backdrop-blur when mobile menu is open 
   // so it doesn't create a CSS containing block that clips the fixed full-screen overlay to the navbar's height limit.
   const navClass = mobileMenuOpen
-    ? "text-foreground" 
+    ? "text-foreground bg-background" 
     : isTransparent 
-      ? "text-white mix-blend-difference" 
+      ? "text-foreground bg-background" 
       : "text-foreground border-b border-foreground/10 bg-background/90 backdrop-blur-xl";
 
   return (

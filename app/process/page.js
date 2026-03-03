@@ -5,7 +5,7 @@ import GlobalNav from "../components/GlobalNav";
 
 export const metadata = {
   title: "Our Process | Luxury by Sam",
-  description: "How we work: free consultation, design & quote, manufacture & installation, final check. Serving Watford and the UK.",
+  description: "How we work: free consultation, design & quote, manufacture & installation, final check. Serving the UK.",
 };
 
 export default function ProcessPage() {

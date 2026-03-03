@@ -89,7 +89,7 @@ export default function CartDrawer() {
                 items.map((item) => (
                   <div key={item.id} className="flex gap-5 relative group">
                     <div
-                      className="w-24 h-32 bg-secondary bg-cover bg-center shrink-0"
+                      className="w-24 h-32 bg-cover bg-center shrink-0 border border-foreground/10"
                       style={{ backgroundImage: item.image ? `url(${item.image})` : item.palette }}
                     />
                     <div className="flex-1 flex flex-col justify-between py-1">

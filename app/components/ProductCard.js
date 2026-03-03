@@ -30,7 +30,7 @@ export default function ProductCard({ product, compact = false }) {
         setMousePos({ x: 0, y: 0 });
       }}
     >
-      <div className={`relative ${compact ? "aspect-square" : "aspect-4/5"} bg-secondary overflow-hidden border border-foreground/5`}>
+      <div className={`relative ${compact ? "aspect-square" : "aspect-4/5"} overflow-hidden border border-foreground/15`}>
         <motion.div
           data-shared-image={product.slug}
           className="absolute inset-0 rounded-[2px] bg-linear-to-br from-[#c8c3ba] via-[#e5e2da] to-[#bbb6ad] overflow-hidden"
@@ -58,7 +58,7 @@ export default function ProductCard({ product, compact = false }) {
             <div className="w-full h-full" style={{ backgroundImage: product.palette, backgroundSize: "cover", backgroundPosition: "center" }} />
           ) : null}
         </motion.div>
-        <div className="absolute inset-0 bg-linear-to-t from-black/50 via-black/10 to-transparent opacity-75 group-hover:opacity-40 transition-opacity duration-700 pointer-events-none" />
+        <div className="absolute inset-0 bg-linear-to-t from-foreground/30 via-transparent to-transparent opacity-75 group-hover:opacity-40 transition-opacity duration-700 pointer-events-none" />
 
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10 pointer-events-none">
           <span className="text-[10px] uppercase tracking-[0.42em] font-bold bg-black/70 border border-white/30 backdrop-blur-md px-6 py-3 text-white">

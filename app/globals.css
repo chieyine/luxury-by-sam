@@ -1,22 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #09090b;
-  --color-foreground: #fafafa;
-  --color-accent: #d4af37;
-  --color-primary: #09090b;
-  --color-secondary: #18181b;
+  --color-background: #FDFCFB;
+  --color-foreground: #33312E;
+  --color-accent: #D1BFA4;
+  --color-primary: #33312E;
+  --color-secondary: #F0EAE1;
 
   --font-serif: "Playfair Display", "Times New Roman", serif;
   --font-sans:
     "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-  --transition-bezier: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bezier: cubic-bezier(0.85, 0, 0.15, 1);
 }
 
 :root {
-  --background: #0f0d0b;
-  --foreground: #f3eee7;
+  --background: #FDFCFB;
+  --foreground: #33312E;
   scroll-behavior: smooth;
 }
 
@@ -44,8 +44,8 @@ html.lenis body {
 }
 
 ::selection {
-  background: #f3eee7;
-  color: #0f0d0b;
+  background: #33312E;
+  color: #FDFCFB;
 }
 
 /* Base Headings */
@@ -71,7 +71,7 @@ h6 {
   height: 100%;
   z-index: 25;
   pointer-events: none;
-  opacity: 0.04;
+  opacity: 0.02;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   animation: grain-drift 1.2s steps(4) infinite;
 }
@@ -79,7 +79,7 @@ h6 {
 .cinematic-grain {
   position: absolute;
   inset: -60%;
-  opacity: 0.06;
+  opacity: 0.03;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   mix-blend-mode: multiply;
   animation: grain-shift 1.1s steps(3) infinite;
@@ -125,7 +125,7 @@ h6 {
   .grain-overlay,
   .cinematic-grain {
     animation-duration: 2.2s;
-    opacity: 0.03;
+    opacity: 0.015;
   }
 }
 
@@ -163,13 +163,14 @@ h6 {
 }
 
 .brutal-panel {
-  border: 1px solid color-mix(in srgb, var(--foreground) 5%, transparent);
-  background: color-mix(in srgb, var(--background) 95%, black 5%);
+  border: 1px solid color-mix(in srgb, var(--foreground) 12%, transparent);
+  background: transparent;
 }
 
 .brutal-title {
-  letter-spacing: -0.06em;
-  line-height: 0.85;
+  letter-spacing: -0.07em;
+  line-height: 0.8;
+  transform: scaleY(1.05); /* Slight vertical stretch for brutalist feel */
 }
 
 .section-shell {
@@ -177,12 +178,11 @@ h6 {
   margin-inline: auto;
 }
 
-/* Uppercase label utility used throughout */
 .label-upper {
-  font-size: 10px;
+  font-size: 9px;
   text-transform: uppercase;
-  letter-spacing: 0.35em;
-  font-weight: 500;
+  letter-spacing: 0.45em;
+  font-weight: 600;
   font-family: var(--font-sans);
 }
 

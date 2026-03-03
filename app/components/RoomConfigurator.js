@@ -111,7 +111,7 @@ export default function RoomConfigurator() {
   const result = recommendations[selections.room] || recommendations.other;
 
   return (
-    <section className="py-24 md:py-40 px-6 md:px-20 bg-secondary/30" data-cursor-label="Configure" data-cursor-tone="accent">
+    <section className="py-24 md:py-40 px-6 md:px-20" data-cursor-label="Configure" data-cursor-tone="accent">
       <div className="max-w-[900px] mx-auto">
         <Reveal>
           <div className="mb-12 md:mb-16 text-center">
@@ -194,7 +194,7 @@ export default function RoomConfigurator() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
                     href={result.link}
-                    className="inline-block bg-foreground text-background px-8 py-4 text-[10px] uppercase tracking-[0.3em] hover:bg-foreground/90 transition-colors"
+                    className="inline-block border border-foreground/20 bg-transparent text-foreground px-8 py-4 text-[10px] uppercase tracking-[0.3em] hover:bg-accent/15 transition-colors"
                   >
                     {result.cta}
                   </Link>

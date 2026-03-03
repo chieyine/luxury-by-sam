@@ -62,7 +62,7 @@ export default function NarrativeBeats() {
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 60vw"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-linear-to-t from-foreground/30 via-transparent to-transparent pointer-events-none" />
               </motion.div>
             </article>
           ))}

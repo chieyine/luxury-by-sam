@@ -49,7 +49,7 @@ export default function ProductStorySequence({ product }) {
           </motion.p>
         </div>
 
-        <div className="relative h-[66vh] md:h-[72vh] border border-foreground/14 overflow-hidden bg-secondary brutal-panel">
+        <div className="relative h-[66vh] md:h-[72vh] border border-foreground/15 overflow-hidden brutal-panel">
           {frameImages.length > 0 ? (
             frameImages.map((frameImage, index) => (
               <motion.div

@@ -14,7 +14,7 @@ const faqs = [
   {
     question: "Which areas do you cover?",
     answer:
-      "We are based in Watford, Hertfordshire and regularly work across the surrounding areas and wider UK. Tell us where you are and we'll confirm availability.",
+      "We are based in Hertfordshire and regularly work across the surrounding areas and wider UK. Tell us where you are and we'll confirm availability.",
   },
   {
     question: "What does a typical project cost?",

@@ -68,7 +68,7 @@ export default async function ProductDetailPage({ params }) {
       <GlobalNav theme="transparent" />
       <SharedElementArrival slug={product.slug} targetId="product-hero-media" />
 
-      <section className="px-6 md:px-20 pt-10 pb-16 md:pb-24" data-cursor-label="Inspect" data-cursor-tone="accent">
+      <section className="px-6 md:px-20 pt-32 md:pt-40 pb-16 md:pb-24" data-cursor-label="Inspect" data-cursor-tone="accent">
         <div className="max-w-[1400px] mx-auto grid md:grid-cols-[1.1fr_0.9fr] gap-12 md:gap-18 items-start">
           <Reveal width="100%">
             <div id="product-hero-media" className="relative aspect-4/5 overflow-hidden bg-secondary border border-foreground/14">

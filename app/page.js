@@ -22,25 +22,12 @@ export default async function Home() {
       <div className="grain-overlay" />
       <GlobalNav theme="transparent" />
 
-      <section className="min-h-screen px-6 md:px-20 pt-32 md:pt-52 pb-24 md:pb-32 flex items-end relative overflow-hidden" data-cursor-label="Hero" data-cursor-tone="default">
-        {/* Cinematic background video */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
-          aria-hidden="true"
-        >
-          <source src="/video/hero.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/40" />
+      <section className="min-h-screen px-6 md:px-20 pt-32 md:pt-52 pb-24 md:pb-32 flex items-end relative" data-cursor-label="Hero" data-cursor-tone="default">
         <div className="max-w-[1400px] w-full mx-auto grid md:grid-cols-[1.4fr_0.6fr] gap-12 md:gap-20 items-end">
           <div>
             <Reveal delay={0.1}>
               <p className="text-[10px] uppercase tracking-[0.4em] text-foreground/75 mb-6">
-                Fitted kitchens, wardrobes & bedrooms · Watford · Serving the UK
+                Fitted kitchens, wardrobes & bedrooms · Serving the UK
               </p>
             </Reveal>
             <Reveal delay={0.2}>
@@ -64,12 +51,12 @@ export default async function Home() {
             <Reveal delay={0.45}>
               <div className="mt-10">
                 <MagneticButton className="inline-block">
-                  <Link href="/start" className="inline-flex items-center gap-3 border border-foreground/30 px-8 py-4 text-[10px] uppercase tracking-[0.3em] hover:bg-foreground hover:text-background transition-colors duration-500">
+                  <Link href="/start" className="inline-flex items-center gap-3 border border-foreground/20 px-8 py-4 text-[10px] uppercase tracking-[0.3em] hover:bg-accent/20 transition-colors duration-500">
                     Get a free quote
                   </Link>
                 </MagneticButton>
                 <MagneticButton className="inline-block ml-3">
-                  <Link href="/shop" className="inline-flex items-center gap-3 border border-foreground/15 px-8 py-4 text-[10px] uppercase tracking-[0.3em] hover:bg-foreground/10 transition-colors duration-500">
+                  <Link href="/shop" className="inline-flex items-center gap-3 border border-foreground/10 px-8 py-4 text-[10px] uppercase tracking-[0.3em] hover:bg-foreground/5 transition-colors duration-500">
                     See what we build
                   </Link>
                 </MagneticButton>
@@ -92,8 +79,8 @@ export default async function Home() {
                         priority={index === 0}
                       />
                     )}
-                    <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
-                    <div className="absolute bottom-3 left-3 right-3 text-[10px] uppercase tracking-[0.3em] text-white/90 flex justify-between">
+                    <div className="absolute inset-0 bg-linear-to-t from-foreground/40 via-transparent to-transparent" />
+                    <div className="absolute bottom-3 left-3 right-3 text-[10px] uppercase tracking-[0.3em] text-white/95 flex justify-between">
                       <span>{item.category}</span>
                       <span>{item.price}</span>
                     </div>

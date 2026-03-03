@@ -7,7 +7,7 @@ import Image from "next/image";
 const scenes = [
   {
     title: "Free Consultation",
-    copy: "We visit your home in Watford (and across the UK) to understand your space, storage needs and budget.",
+    copy: "We visit your home (across the UK) to understand your space, storage needs and budget.",
     image:
       "/images/photo-1484101403633-562f891dc89a.jpg",
   },
@@ -71,7 +71,7 @@ export default function StickySceneFlow() {
                 />
               </motion.div>
             ))}
-            <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-foreground/40 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 text-white">
               <p className="text-[10px] uppercase tracking-[0.3em] opacity-70 mb-2">Active scene</p>
               <h3 className="text-4xl font-serif leading-none">{scenes[activeIndex].title}</h3>

@@ -75,7 +75,7 @@ export default function ContactExperience() {
                 <Reveal delay={0.3}>
                   <div>
                     <h3 className="text-[10px] uppercase tracking-[0.3em] font-bold text-foreground/40 mb-4">Serving area</h3>
-                    <p className="font-serif text-2xl mb-1 mt-2">Watford, Hertfordshire</p>
+                    <p className="font-serif text-2xl mb-1 mt-2">Serving the UK</p>
                     <p className="font-sans text-foreground/70">Available across the United Kingdom</p>
                   </div>
                 </Reveal>
@@ -186,7 +186,7 @@ export default function ContactExperience() {
                     <button 
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-foreground text-background py-5 text-[11px] uppercase tracking-[0.3em] font-medium hover:bg-foreground/90 transition-colors disabled:opacity-50 relative overflow-hidden"
+                      className="w-full border border-foreground/20 bg-transparent text-foreground py-5 text-[11px] uppercase tracking-[0.3em] font-medium hover:bg-accent/15 transition-colors disabled:opacity-50 relative overflow-hidden"
                     >
                       <span className={isSubmitting ? "opacity-0" : "opacity-100"}>Send enquiry</span>
                       {isSubmitting && (
@@ -211,14 +211,14 @@ export default function ContactExperience() {
           <Reveal width="100%">
             <div className="w-full aspect-21/9 md:aspect-3/1 relative overflow-hidden border border-foreground/10">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39640.89!2d-0.42!3d51.655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48766b44299f8729%3A0x5a3641b6f026b2!2sWatford!5e0!3m2!1sen!2suk!4v1709000000000"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39640.89!2d-0.42!3d51.655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48766b441f77d337%3A0x7d287bb175d9e50e!2sHertfordshire!5e0!3m2!1sen!2suk!4v1709000000000"
                 width="100%"
                 height="100%"
                 className="absolute inset-0 w-full h-full border-0 grayscale invert opacity-80"
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Luxury by Sam — Watford, Hertfordshire"
+                title="Luxury by Sam"
               />
             </div>
           </Reveal>

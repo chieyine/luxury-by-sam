@@ -13,18 +13,18 @@ const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-san
 const playfair = Playfair_Display({ subsets: ["latin"], display: "swap", variable: "--font-serif" });
 
 export const viewport = {
-  themeColor: "#0f0d0b",
+  themeColor: "#f5f1ea",
 };
 
 export const metadata = {
   metadataBase: new URL("https://luxurybysam.com"),
   title: "Luxury by Sam | Fitted Kitchens & Bedrooms",
   description:
-    "Quality fitted kitchens, wardrobes and bedroom furniture at prices you can afford. Based in Watford, Hertfordshire — serving the UK. Free consultation & quote.",
+    "Quality fitted kitchens, wardrobes and bedroom furniture at prices you can afford. Based in the UK. Free consultation & quote.",
   openGraph: {
     title: "Luxury by Sam | Fitted Kitchens & Bedrooms",
     description:
-      "Quality fitted kitchens, wardrobes and bedroom furniture at prices you can afford. Based in Watford, Hertfordshire — serving the UK.",
+      "Quality fitted kitchens, wardrobes and bedroom furniture at prices you can afford. Serving the UK.",
     url: "/",
     siteName: "Luxury by Sam",
     type: "website",
@@ -33,7 +33,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Luxury by Sam | Fitted Kitchens & Bedrooms",
     description:
-      "Quality fitted kitchens, wardrobes and bedroom furniture at prices you can afford. Based in Watford, Hertfordshire — serving the UK.",
+      "Quality fitted kitchens, wardrobes and bedroom furniture at prices you can afford. Serving the UK.",
   },
 };
 
@@ -61,13 +61,11 @@ export default function RootLayout({ children }) {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           "name": "Luxury by Sam",
-          "description": "Quality fitted kitchens, wardrobes and bedroom furniture at prices you can afford. Based in Watford, Hertfordshire — serving the UK.",
+          "description": "Quality fitted kitchens, wardrobes and bedroom furniture at prices you can afford. Serving the UK.",
           "url": "https://luxurybysam.com",
           "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Watford",
-            "addressRegion": "Hertfordshire",
-            "addressCountry": "UK"
+            "addressRegion": "UK"
           }
         }) }} />
         <CartProvider>

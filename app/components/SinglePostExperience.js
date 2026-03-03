@@ -98,10 +98,10 @@ export default function SinglePostExperience({ post }) {
                   Let's bring your<br />ideas to life.
                 </h2>
                 <div className="flex gap-4 justify-center">
-                  <a href="/start" className="bg-foreground text-background px-8 py-4 text-[10px] uppercase tracking-[0.25em] font-medium hover:bg-foreground/90 transition-colors">
-                    Get a Free Quote
+                  <a href="/start" className="border border-foreground/20 bg-transparent text-foreground px-8 py-4 text-[10px] uppercase tracking-[0.25em] font-medium hover:bg-accent/15 transition-colors">
+                    Start a project
                   </a>
-                  <a href="/advice" className="border border-foreground/20 px-8 py-4 text-[10px] uppercase tracking-[0.25em] font-medium hover:bg-foreground/5 transition-colors">
+                  <a href="/advice" className="border border-foreground/10 px-8 py-4 text-[10px] uppercase tracking-[0.25em] font-medium hover:bg-foreground/5 transition-colors">
                     More Advice
                   </a>
                 </div>
