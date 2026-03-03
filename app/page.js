@@ -33,7 +33,7 @@ export default async function Home() {
           className="absolute inset-0 w-full h-full object-cover opacity-30"
           aria-hidden="true"
         >
-          <source src="https://videos.pexels.com/video-files/6707543/6707543-uhd_2560_1440_30fps.mp4" type="video/mp4" />
+          <source src="/video/hero.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/40" />
         <div className="max-w-[1400px] w-full mx-auto grid md:grid-cols-[1.4fr_0.6fr] gap-12 md:gap-20 items-end">
