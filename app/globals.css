@@ -1,26 +1,262 @@
 @import "tailwindcss";
 
+@theme {
+  --color-background: #09090b;
+  --color-foreground: #fafafa;
+  --color-accent: #d4af37;
+  --color-primary: #09090b;
+  --color-secondary: #18181b;
+
+  --font-serif: "Playfair Display", "Times New Roman", serif;
+  --font-sans:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --transition-bezier: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0f0d0b;
+  --foreground: #f3eee7;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  line-height: 1.45;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+::selection {
+  background: #f3eee7;
+  color: #0f0d0b;
+}
+
+/* Base Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+/* Awwwards Premium Effects */
+
+/* Grain/Noise Overlay */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 25;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  animation: grain-drift 1.2s steps(4) infinite;
+}
+
+.cinematic-grain {
+  position: absolute;
+  inset: -60%;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+  animation: grain-shift 1.1s steps(3) infinite;
+}
+
+@keyframes grain-drift {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-1%, 1%);
+  }
+  50% {
+    transform: translate(1%, -1%);
+  }
+  75% {
+    transform: translate(0.5%, 0.5%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes grain-shift {
+  0% {
+    transform: translate3d(-2%, 1%, 0);
+  }
+  25% {
+    transform: translate3d(1%, -2%, 0);
+  }
+  50% {
+    transform: translate3d(2%, 1%, 0);
+  }
+  75% {
+    transform: translate3d(-1%, 2%, 0);
+  }
+  100% {
+    transform: translate3d(-2%, 1%, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .grain-overlay,
+  .cinematic-grain {
+    animation-duration: 2.2s;
+    opacity: 0.03;
+  }
+}
+
+/* Mask Reveal Animation */
+.mask-reveal {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transition: clip-path 1.2s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.mask-reveal.hidden {
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+}
+
+/* Luxury Link */
+.luxury-link {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.luxury-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  transform: translateX(-100%);
+  transition: transform 0.8s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.luxury-link:hover::after {
+  transform: translateX(0);
+}
+
+.brutal-panel {
+  border: 1px solid color-mix(in srgb, var(--foreground) 5%, transparent);
+  background: color-mix(in srgb, var(--background) 95%, black 5%);
+}
+
+.brutal-title {
+  letter-spacing: -0.06em;
+  line-height: 0.85;
+}
+
+.section-shell {
+  width: min(100%, 1400px);
+  margin-inline: auto;
+}
+
+/* Uppercase label utility used throughout */
+.label-upper {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-weight: 500;
+  font-family: var(--font-sans);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--foreground) 35%, transparent);
+  border-radius: 10px;
+}
+
+/* Layout Utilities */
+.asymmetric-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+}
+
+.overlap-image {
+  position: relative;
+  z-index: 1;
+}
+
+.float-text {
+  position: absolute;
+  z-index: 2;
+  mix-blend-mode: difference;
+  color: white;
+}
+
+.soft-card {
+  backdrop-filter: blur(12px);
+  background: color-mix(in srgb, var(--background) 88%, transparent);
+}
+
+/* Print styles for PDF quote generation */
+@media print {
+  @page {
+    margin: 1.5cm;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Hide navigation, footer, decorative elements */
+  nav, footer, .grain-overlay, .cinematic-grain,
+  [class*="FloatingActions"], [class*="CartDrawer"],
+  [class*="z-90"], [class*="z-110"], [class*="z-120"],
+  button {
+    display: none !important;
+  }
+
+  /* Force high contrast on everything */
+  * {
+    color: black !important;
+    background: transparent !important;
+  }
+
+  /* Target all tailwind text-opacity classes inside the print view */
+  .text-foreground\/60, .text-foreground\/50, .text-foreground\/40 {
+    color: #444 !important;
+  }
+  
+  .border-foreground\/15, .border-foreground\/10 {
+    border-color: #ddd !important;
+  }
 }
