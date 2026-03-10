@@ -62,7 +62,7 @@ export default function FAQSection() {
             <p className="label-upper text-foreground/45 mb-3">Questions</p>
             <h2 className="text-3xl md:text-5xl font-serif brutal-title mb-4">Common Things People Ask</h2>
             <p className="text-foreground/60 text-[15px] md:text-base leading-[1.6] max-w-md">
-              If you're not sure where to start, these answers will give you a feel for how we work. If anything isn't
+              If you&apos;re not sure where to start, these answers will give you a feel for how we work. If anything isn&apos;t
               covered, just send us a quick message.
             </p>
           </div>

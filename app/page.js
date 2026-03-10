@@ -32,20 +32,16 @@ export default async function Home() {
             </Reveal>
             <Reveal delay={0.2}>
               <h1 className="text-[12vw] md:text-[7.5vw] lg:text-[90px] brutal-title font-serif uppercase max-w-4xl opacity-90 leading-[0.85] md:leading-[0.85]">
-                Quality
+                Fitted Kitchen,
                 <br />
-                Fitted
+                Wall Media,
                 <br />
-                Furniture
-                <br />
-                You Can
-                <br />
-                Afford
+                Wardrobes and Bedrooms
               </h1>
             </Reveal>
             <Reveal delay={0.35}>
               <p className="mt-10 max-w-xl text-foreground/70 leading-[1.7] text-[15px] md:text-[17px] font-sans font-light">
-                Custom-built wardrobes, fitted bedrooms, media walls and kitchen cabinets—designed around your space, style and budget. From design to installation, we keep it simple, reliable and finished to a high standard.
+                Bespoke custom-built wardrobes, fitted bedrooms, media walls and kitchen cabinets—designed around your space, style and budget. From design to installation, we keep it simple, reliable and finished to a professional high standard.
               </p>
             </Reveal>
             <Reveal delay={0.45}>

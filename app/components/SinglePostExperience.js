@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Reveal, SmoothScroll } from "./Animations";
 import { useRef } from "react";
+import Link from "next/link";
 
 export default function SinglePostExperience({ post }) {
   const container = useRef(null);
@@ -95,15 +96,15 @@ export default function SinglePostExperience({ post }) {
             <Reveal>
                 <p className="text-[11px] uppercase tracking-[0.3em] font-medium text-foreground/40 mb-6">Ready to start?</p>
                 <h2 className="text-4xl md:text-5xl font-serif leading-tight mb-8">
-                  Let's bring your<br />ideas to life.
+                  Let&apos;s bring your<br />ideas to life.
                 </h2>
                 <div className="flex gap-4 justify-center">
-                  <a href="/start" className="border border-foreground/20 bg-transparent text-foreground px-8 py-4 text-[10px] uppercase tracking-[0.25em] font-medium hover:bg-accent/15 transition-colors">
+                  <Link href="/start" className="border border-foreground/20 bg-transparent text-foreground px-8 py-4 text-[10px] uppercase tracking-[0.25em] font-medium hover:bg-accent/15 transition-colors">
                     Start a project
-                  </a>
-                  <a href="/advice" className="border border-foreground/10 px-8 py-4 text-[10px] uppercase tracking-[0.25em] font-medium hover:bg-foreground/5 transition-colors">
+                  </Link>
+                  <Link href="/advice" className="border border-foreground/10 px-8 py-4 text-[10px] uppercase tracking-[0.25em] font-medium hover:bg-foreground/5 transition-colors">
                     More Advice
-                  </a>
+                  </Link>
                 </div>
             </Reveal>
         </section>

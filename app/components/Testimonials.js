@@ -42,7 +42,7 @@ export default function Testimonials() {
               </h2>
             </div>
             <p className="text-[15px] font-light text-foreground/60 max-w-md pb-2">
-              We take pride in our finish and our service. Here's what people say after we've packed away our tools.
+              We take pride in our work and services. These are reviews from our customers.
             </p>
           </div>
         </Reveal>
@@ -61,7 +61,7 @@ export default function Testimonials() {
                     ))}
                   </div>
                   <blockquote className="text-[1.35rem] md:text-[1.7rem] font-serif leading-[1.4] mb-12">
-                    "{item.text}"
+                    &quot;{item.text}&quot;
                   </blockquote>
                 </div>
                 <div className="pt-8 border-t border-foreground/10 flex justify-between items-end">

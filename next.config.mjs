@@ -18,6 +18,17 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'luxury-by-sam.netlify.app',
+          },
+        ],
+        destination: 'https://luxurybysam.com/:path*',
+        permanent: true,
+      },
+      {
         source: '/journal',
         destination: '/advice',
         permanent: true,

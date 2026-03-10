@@ -118,7 +118,7 @@ export default function RoomConfigurator() {
             <p className="label-upper text-foreground/45 mb-3">Interactive</p>
             <h2 className="text-3xl md:text-5xl font-serif brutal-title">Find Your Perfect Fit</h2>
             <p className="text-foreground/60 mt-4 max-w-md mx-auto text-[15px] font-light">
-              Answer three quick questions and we'll recommend the best solution for your space.
+              Answer three quick questions and we&apos;ll recommend the best solution for your space.
             </p>
           </div>
         </Reveal>

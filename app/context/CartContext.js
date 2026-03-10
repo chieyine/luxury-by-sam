@@ -13,6 +13,7 @@ export function CartProvider({ children }) {
     const savedCart = localStorage.getItem("luxury_by_sam_cart");
     if (savedCart) {
       try {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setItems(JSON.parse(savedCart));
       } catch (e) {
         console.error("Failed to parse cart", e);

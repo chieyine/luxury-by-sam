@@ -60,14 +60,14 @@ export default function ContactExperience() {
             <div>
               <Reveal>
                 <h1 className="text-[10vw] md:text-[6.5vw] brutal-title font-serif leading-[0.9] tracking-tighter uppercase mb-8">
-                  Let's Talk
+                  Let&apos;s Talk
                   <br />
                   <span className="italic text-foreground/40 text-[9vw] md:text-[5.5vw]">Your Project</span>
                 </h1>
               </Reveal>
               <Reveal delay={0.2}>
                 <p className="max-w-md text-foreground/60 leading-relaxed font-sans text-base md:text-lg">
-                  Every great space starts with a conversation. Tell us what you have in mind—whether it's a single wardrobe or a full kitchen re-fit. We'll get back to you within 48 hours to arrange a free, no-obligation design consultation and quote.
+                  Every great space starts with a conversation. Tell us what you have in mind—whether it&apos;s a single wardrobe or a full kitchen re-fit. We&apos;ll get back to you within 48 hours to arrange a free, no-obligation design consultation and quote.
                 </p>
               </Reveal>
               
@@ -84,7 +84,7 @@ export default function ContactExperience() {
                   <div>
                     <h3 className="text-[10px] uppercase tracking-[0.3em] font-bold text-foreground/40 mb-4">Direct Contact</h3>
                     <a href="mailto:luxurybysam01@gmail.com" className="font-serif text-2xl hover:text-accent transition-colors">
-                      luxurybysam01@gmail.com
+                      luxurybysam<span className="text-[1.2em] align-baseline" style={{ fontVariantNumeric: "tabular-nums" }}>01</span>@gmail.com
                     </a>
                     <p className="mt-3 font-sans text-foreground/70">
                       Call:{" "}

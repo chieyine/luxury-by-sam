@@ -61,6 +61,9 @@ export default function CartDrawer() {
 
           <motion.div
             ref={drawerRef}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="cart-drawer-title"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
@@ -68,7 +71,7 @@ export default function CartDrawer() {
             className="fixed top-0 right-0 bottom-0 w-full max-w-md bg-background border-l border-foreground/15 z-120 flex flex-col shadow-2xl"
           >
             <div className="flex items-center justify-between px-6 md:px-10 py-8 border-b border-foreground/15">
-              <h2 className="text-2xl font-serif tracking-tight">Quote list ({items.length})</h2>
+              <h2 id="cart-drawer-title" className="text-2xl font-serif tracking-tight">Quote list ({items.length})</h2>
               <button
                 onClick={closeDrawer}
                 className="text-[10px] uppercase tracking-[0.2em] font-sans hover:text-foreground/50 transition-colors"

@@ -15,7 +15,7 @@ export default function MobileNav({ open, setOpen }) {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [open]);
+  }, [open, setOpen]);
 
   return (
     <>
