@@ -7,6 +7,7 @@ import GlobalClientVisuals from "./components/GlobalClientVisuals";
 import Footer from "./components/Footer";
 import CartDrawer from "./components/CartDrawer";
 import FloatingActions from "./components/FloatingActions";
+import CookieBanner from "./components/CookieBanner";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-sans" });
@@ -77,6 +78,7 @@ export default function RootLayout({ children }) {
               </div>
               <CartDrawer />
               <FloatingActions />
+              <CookieBanner />
               <Footer />
             </div>
           </ExperienceProvider>
