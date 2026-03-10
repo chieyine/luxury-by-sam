@@ -55,14 +55,14 @@ export default function CookieBanner() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="fixed bottom-6 left-6 right-6 md:left-auto md:right-10 md:bottom-10 md:max-w-[420px] bg-foreground text-background z-120 p-6 md:p-8 flex flex-col shadow-2xl brutal-panel border-background/20"
+          className="fixed bottom-6 left-6 right-6 md:right-auto md:left-10 md:bottom-10 md:max-w-[420px] bg-[#33312E] text-white z-120 p-6 md:p-8 flex flex-col shadow-2xl brutal-panel border-0"
           role="dialog"
           aria-live="polite"
           aria-label="Cookie consent banner"
         >
           <div className="mb-6">
-            <h3 className="font-serif text-xl mb-3">Your Privacy</h3>
-            <p className="font-sans text-[13px] leading-relaxed text-background/80 font-light">
+            <h3 className="font-serif text-xl mb-3 text-white">Your Privacy</h3>
+            <p className="font-sans text-[13px] leading-relaxed text-white/80 font-light">
               We use cookies to improve your experience and measure how our site is used. 
               By clicking &quot;Accept All&quot;, you consent to our use of cookies. 
             </p>
@@ -71,13 +71,13 @@ export default function CookieBanner() {
           <div className="flex flex-col sm:flex-row gap-3">
             <button
               onClick={handleAccept}
-              className="flex-1 bg-background text-foreground py-3 text-[10px] uppercase tracking-[0.25em] font-medium hover:bg-background/90 transition-colors"
+              className="flex-1 bg-white text-[#33312E] py-3 text-[10px] uppercase tracking-[0.25em] font-medium hover:bg-white/90 transition-colors"
             >
               Accept All
             </button>
             <button
               onClick={handleDecline}
-              className="flex-1 border border-background/30 text-background py-3 text-[10px] uppercase tracking-[0.25em] font-medium hover:bg-background/10 transition-colors"
+              className="flex-1 border border-white/30 text-white py-3 text-[10px] uppercase tracking-[0.25em] font-medium hover:bg-white/10 transition-colors"
             >
               Necessary Only
             </button>
