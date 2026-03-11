@@ -45,7 +45,13 @@ export default function Footer() {
       </div>
 
       <div className="max-w-[1400px] mx-auto pt-10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-[10px] uppercase tracking-[0.2em] font-bold text-foreground/35">
-        <span>© 2026 Luxury by Sam</span>
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
+          <span>© {new Date().getFullYear()} Luxury by Sam</span>
+          <div className="flex gap-6">
+            <Link href="/privacy" className="hover:text-foreground/70 transition-colors">Privacy</Link>
+            <Link href="/terms" className="hover:text-foreground/70 transition-colors">Terms</Link>
+          </div>
+        </div>
         <span>Made to measure · Clean installation · Friendly service</span>
       </div>
     </footer>
