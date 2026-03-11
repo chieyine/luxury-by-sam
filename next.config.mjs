@@ -54,6 +54,10 @@ const nextConfig = {
       },
       // In case WordPress is used for images
       {
+        protocol: 'https',
+        hostname: 'content.luxurybysam.com',
+      },
+      {
         protocol: 'http',
         hostname: 'furniture.local',
       },
