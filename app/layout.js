@@ -58,14 +58,6 @@ export default function RootLayout({ children }) {
             </Script>
           </>
         )}
-        {/* Hidden form for Netlify Bots to detect the schema at build time */}
-        <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
-          <input type="hidden" name="form-name" value="contact" />
-          <input type="text" name="name" />
-          <input type="email" name="email" />
-          <input type="text" name="subject" />
-          <textarea name="message"></textarea>
-        </form>
         <Script id="json-ld-local-business" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
