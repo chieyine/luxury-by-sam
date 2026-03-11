@@ -29,16 +29,6 @@ export default function Footer() {
                 {item.label}
               </Link>
             ))}
-            <div className="pt-2 space-y-3">
-              <a href="https://www.youtube.com/@sams_kitchen_bedrooms" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-foreground/70 hover:text-foreground hover:translate-x-2 transition-all duration-300">
-                <Youtube size={16} strokeWidth={1.5} />
-                YouTube
-              </a>
-              <a href="https://www.instagram.com/samskitchenandbedroom" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-foreground/70 hover:text-foreground hover:translate-x-2 transition-all duration-300">
-                <Instagram size={16} strokeWidth={1.5} />
-                Instagram
-              </a>
-            </div>
           </div>
           <div className="space-y-5">
             <p className="text-[10px] uppercase tracking-widest text-foreground/40 font-bold">Serving area</p>
@@ -52,6 +42,14 @@ export default function Footer() {
           <a href="tel:+447733689409" className="block text-xl md:text-2xl font-serif tracking-tight text-foreground hover:text-accent transition-colors">07733 689409</a>
           <a href="mailto:luxurybysam01@gmail.com" className="block text-[15px] text-foreground/70 hover:text-accent transition-colors">luxurybysam01@gmail.com</a>
           <p className="text-[13px] text-foreground/40">luxurybysam.com</p>
+          <div className="flex md:justify-end gap-5 pt-4">
+            <a href="https://www.instagram.com/samskitchenandbedroom" aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="text-foreground/40 hover:text-foreground hover:scale-110 transition-all duration-300">
+              <Instagram size={20} strokeWidth={1.5} />
+            </a>
+            <a href="https://www.youtube.com/@sams_kitchen_bedrooms" aria-label="YouTube" target="_blank" rel="noopener noreferrer" className="text-foreground/40 hover:text-foreground hover:scale-110 transition-all duration-300">
+              <Youtube size={20} strokeWidth={1.5} />
+            </a>
+          </div>
         </div>
       </div>
 
