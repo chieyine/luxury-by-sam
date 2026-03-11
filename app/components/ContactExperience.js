@@ -109,6 +109,7 @@ export default function ContactExperience() {
                       <input
                         type="text"
                         id="name"
+                        name="name"
                         value={formState.name}
                         onChange={(e) => setFormState({...formState, name: e.target.value})}
                         required
@@ -127,6 +128,7 @@ export default function ContactExperience() {
                       <input
                         type="email"
                         id="email"
+                        name="email"
                         value={formState.email}
                         onChange={(e) => setFormState({...formState, email: e.target.value})}
                         required
@@ -144,6 +146,7 @@ export default function ContactExperience() {
                     <div className="relative">
                       <select
                         id="subject"
+                        name="subject"
                         value={formState.subject}
                         onChange={(e) => setFormState({...formState, subject: e.target.value})}
                         className="w-full bg-transparent border-b border-foreground/20 py-4 focus:outline-none focus:border-foreground transition-colors font-sans text-lg appearance-none cursor-pointer"
@@ -161,6 +164,7 @@ export default function ContactExperience() {
                     <div className="relative">
                       <textarea
                         id="message"
+                        name="message"
                         value={formState.message}
                         onChange={(e) => setFormState({...formState, message: e.target.value})}
                         required

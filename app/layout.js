@@ -58,8 +58,9 @@ export default function RootLayout({ children }) {
             </Script>
           </>
         )}
-        {/* Hidden form for Netlify Bots */}
+        {/* Hidden form for Netlify Bots to detect the schema at build time */}
         <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+          <input type="hidden" name="form-name" value="contact" />
           <input type="text" name="name" />
           <input type="email" name="email" />
           <input type="text" name="subject" />
