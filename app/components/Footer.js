@@ -12,7 +12,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
+        <div className="grid grid-cols-2 gap-10 md:gap-16">
           <div className="space-y-4">
             <p className="label-upper text-foreground/40 font-bold">Navigation</p>
             {[
@@ -29,22 +29,21 @@ export default function Footer() {
                 {item.label}
               </Link>
             ))}
+            <div className="pt-2 space-y-3">
+              <a href="https://www.youtube.com/@sams_kitchen_bedrooms" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-foreground/70 hover:text-foreground hover:translate-x-2 transition-all duration-300">
+                <Youtube size={16} strokeWidth={1.5} />
+                YouTube
+              </a>
+              <a href="https://www.instagram.com/samskitchenandbedroom" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-foreground/70 hover:text-foreground hover:translate-x-2 transition-all duration-300">
+                <Instagram size={16} strokeWidth={1.5} />
+                Instagram
+              </a>
+            </div>
           </div>
           <div className="space-y-5">
             <p className="text-[10px] uppercase tracking-widest text-foreground/40 font-bold">Serving area</p>
             <p className="text-sm text-foreground/70">Across the United Kingdom</p>
             <p className="text-sm text-foreground/70">Free consultation & quotation</p>
-          </div>
-          <div className="space-y-5">
-            <p className="text-[10px] uppercase tracking-widest text-foreground/40 font-bold">Socials</p>
-            <a href="https://www.youtube.com/@sams_kitchen_bedrooms" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-foreground/70 hover:text-foreground hover:translate-x-2 transition-all duration-300">
-              <Youtube size={18} strokeWidth={1.5} />
-              YouTube
-            </a>
-            <a href="https://www.instagram.com/samskitchenandbedroom" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-foreground/70 hover:text-foreground hover:translate-x-2 transition-all duration-300">
-              <Instagram size={18} strokeWidth={1.5} />
-              Instagram
-            </a>
           </div>
         </div>
 
