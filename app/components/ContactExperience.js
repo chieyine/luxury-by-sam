@@ -26,30 +26,22 @@ export default function ContactExperience() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const { name, email, subject, message } = formState;
+    const formData = new FormData(e.target);
+    formData.append("form-name", "contact");
 
-    const subjectLine = `New website enquiry (${subject || "General"}) from ${name || "Unknown"}`;
-
-    const body = [
-      "New enquiry from the contact page:",
-      "",
-      `Name: ${name}`,
-      `Email: ${email}`,
-      "",
-      "Message:",
-      message,
-    ]
-      .filter(Boolean)
-      .join("\n");
-
-    const mailtoUrl = `mailto:luxurybysam01@gmail.com?subject=${encodeURIComponent(
-      subjectLine
-    )}&body=${encodeURIComponent(body)}`;
-
-    window.location.href = mailtoUrl;
-
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("There was an issue sending your message. Please try emailing us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -111,7 +103,8 @@ export default function ContactExperience() {
                     </p>
                   </motion.div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-10 group">
+                  <form onSubmit={handleSubmit} data-netlify="true" name="contact" className="space-y-10 group">
+                    <input type="hidden" name="form-name" value="contact" />
                     <div className="relative">
                       <input
                         type="text"
