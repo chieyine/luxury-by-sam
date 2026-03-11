@@ -22,18 +22,25 @@ export default function ContactExperience() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  const encode = (data) => {
+    return Object.keys(data)
+      .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    const formData = new FormData(e.target);
-    formData.append("form-name", "contact");
 
     try {
       await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
+        body: encode({ 
+          "form-name": "contact", 
+          "bot-field": "", // Netlify honeypot expects an empty string from real users
+          ...formState 
+        }),
       });
       setIsSubmitted(true);
     } catch (error) {
