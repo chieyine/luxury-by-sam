@@ -19,11 +19,11 @@ export const viewport = {
 
 export const metadata = {
   metadataBase: new URL("https://luxurybysam.com"),
-  title: "Luxury by Sam | Fitted Kitchens & Bedrooms",
+  title: "Luxury by Sam | Sam's Kitchen & Bedrooms",
   description:
     "Quality fitted kitchens, wardrobes and bedroom furniture at prices you can afford. Based in the UK. Free consultation & quote.",
   openGraph: {
-    title: "Luxury by Sam | Fitted Kitchens & Bedrooms",
+    title: "Luxury by Sam | Sam's Kitchen & Bedrooms",
     description:
       "Quality fitted kitchens, wardrobes and bedroom furniture at prices you can afford. Serving the UK.",
     url: "/",
@@ -32,7 +32,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Luxury by Sam | Fitted Kitchens & Bedrooms",
+    title: "Luxury by Sam | Sam's Kitchen & Bedrooms",
     description:
       "Quality fitted kitchens, wardrobes and bedroom furniture at prices you can afford. Serving the UK.",
   },

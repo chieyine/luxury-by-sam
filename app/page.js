@@ -27,7 +27,7 @@ export default async function Home() {
           <div>
             <Reveal delay={0.1}>
               <p className="text-[10px] uppercase tracking-[0.4em] text-foreground/75 mb-6">
-                Fitted kitchens, wardrobes & bedrooms · Serving the UK
+                Sam's Kitchen & Bedrooms · Serving the UK
               </p>
             </Reveal>
             <Reveal delay={0.2}>
